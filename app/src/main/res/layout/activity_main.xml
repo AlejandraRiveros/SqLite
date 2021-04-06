@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="392dp"
+        android:layout_height="648dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth"
+            android:text="@string/tv_titulo"
+            android:textAlignment="center"
+            android:textColor="#3C1188"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/etDocumento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/et_documento"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etNombres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/et_nombres"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etApellidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/et_apellidos"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/et_usuario"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etContra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/et_contra"
+            android:inputType="textPassword" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btRegistrar"
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:onClick="registrarUsuario"
+                android:text="@string/bt_registrar" />
+
+            <Button
+                android:id="@+id/btBuscar"
+                android:layout_width="127dp"
+                android:layout_height="wrap_content"
+                android:onClick="buscarUsuario"
+                android:text="@string/bt_buscar" />
+
+            <Button
+                android:id="@+id/btListarRegistros"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:onClick="consultaUsuario"
+                android:text="@string/bt_listar_registros" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <Button
+                android:id="@+id/btActualizar"
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:onClick="actualizarUsuario"
+                android:text="@string/bt_actualizar" />
+
+        </TableRow>
+
+        <ListView
+            android:id="@+id/lvLista"
+            android:layout_width="match_parent"
+            android:layout_height="376dp" >
+
+        </ListView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
